@@ -15,6 +15,7 @@ public class OrderServiceImpl implements OrderService {
     private final MemberRepository memberRepository;
     private final DiscountPolicy discountPolicy;
     // DIP를 지키게 됐음.
+    //  생성자가 1개있으면 오토와이어드 안해도 자동으로 빈 등록됌.
     @Autowired
     public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
